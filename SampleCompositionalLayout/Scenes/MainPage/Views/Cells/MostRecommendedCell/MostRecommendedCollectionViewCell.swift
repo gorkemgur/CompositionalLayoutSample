@@ -38,7 +38,7 @@ final class MostRecommendedCollectionViewCell: UICollectionViewCell {
         appTitleLabel.text = model.title
         appDescriptionLabel.text = model.description
         appImageView.image = UIImage(named: model.imageName)
-        downloadAppbutton.setTitle(model.isAppInstalled ? "Aç" : "Indir", for: .normal)
+        downloadAppbutton.setTitle(model.isAppInstalled ? "Aç" : "İndir", for: .normal)
         downloadAppbutton.setTitleColor(model.isAppInstalled ? .blue : .white, for: .normal)
     }
 

@@ -29,6 +29,8 @@ final class SliderCollectionViewCell: UICollectionViewCell {
         sliderDescriptionLabel.textColor = .gray
         sliderDescriptionLabel.font = .systemFont(ofSize: 16)
         
+        sliderImageView.layer.masksToBounds = true
+        sliderImageView.layer.cornerRadius = 8
         
         downloadButtonContainerView.backgroundColor = .lightGray.withAlphaComponent(0.6)
         downloadButtonContainerView.layer.cornerRadius = 12
@@ -40,7 +42,7 @@ final class SliderCollectionViewCell: UICollectionViewCell {
         sliderSubTitleLabel.text = model.subTitle
         sliderDescriptionLabel.text = model.description
         sliderImageView.image = UIImage(named: model.imageName)
-        downloadButton.setTitle(model.isAppInstalled ? "Aç" : "Indir", for: .normal)
+        downloadButton.setTitle(model.isAppInstalled ? "Aç" : "İndir", for: .normal)
         downloadButton.setTitleColor(model.isAppInstalled ? .blue : .white, for: .normal)
     }
 
