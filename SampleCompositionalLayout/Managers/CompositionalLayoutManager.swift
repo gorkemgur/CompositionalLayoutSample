@@ -34,7 +34,8 @@ final class CompositionalLayoutManager {
             itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         } else {
             groupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .estimated(50))
-            itemSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .fractionalHeight(1.0))
+            itemSize = NSCollectionLayoutSize(widthDimension: .estimated(120),
+                                              heightDimension: .fractionalHeight(1.0))
         }
         let item = NSCollectionLayoutItem(layoutSize: itemSize!)
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize!, subitems: [item])
@@ -53,7 +54,7 @@ final class CompositionalLayoutManager {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1) , heightDimension: .absolute(270))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15)
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
